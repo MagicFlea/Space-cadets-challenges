@@ -1,0 +1,21 @@
+import org.jsoup.Jsoup; // Jsoup seems to make this a lot easier
+import org.jsoup.nodes.Document;
+import java.util.Scanner;
+import java.net.URL;
+import BufferedReader
+public class Input {
+	public static void main(String[] args) { 
+		//welcome to painful readability land, please enjoy your stay
+		InputStreamReader iCantRead = new InputStreamReader(System.in);
+        BufferedReader iAmBuff = new BufferedReader(iCantRead);
+		System.out.println("Enter the university email of the person");
+		String email = iAmBuff.nextLine();
+		String emailarray[]= email.split("@");
+		String username = emailarray[0];
+		String url = "https://www.ecs.soton.ac.uk/people/" + username;
+        document = Jsoup.connect(url).get();
+        String  = document.title().startsWith("People") ? "Dead Presumed Missing" : 
+        "The person that email belongs to is: "+ document.title().split(" \\| ")[0];
+        System.out.println(fullName);
+	}
+}
